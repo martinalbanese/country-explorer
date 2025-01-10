@@ -10,7 +10,7 @@ import CountryDetails from "@/components/CountryDetails"; // Importiamo il compo
 const Details = () => {
     return (
         <Box p={5}>
-            <CountryDetails /> {/* Renderizziamo il componente CountryDetails */}
+            <CountryDetails />
         </Box>
     );
 };

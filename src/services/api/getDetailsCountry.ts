@@ -34,7 +34,7 @@ export const getDetailsCountries = async (name: string): Promise<CountryDetailsT
             capital: countryData.capital ?? [],
             languages: countryData.languages ?? {},
             currencies: countryData.currencies ?? {},
-            borders: countryData.borders ?? [],
+            borders: countryData.borders ?? ["This country has no borders"],
             timezones: countryData.timezones ?? [],
             idd: {
                 root: countryData.idd?.root ?? '',

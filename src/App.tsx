@@ -1,25 +1,16 @@
-import Layout from "@/components/Layout";
-import { Route, Routes } from "react-router";
-import Details from "./pages/Details";
-import Home from "./pages/Home";
-
-/**
- * Componente principale dell'applicazione che gestisce le rotte e la navigazione.
- * Usa `Layout` per renderizzare una struttura base di layout con header fisso.
- *
- * @returns Il componente `Layout` che contiene le rotte dell'applicazione.
- */
+import { Route, Routes } from 'react-router';
+import Layout from '@/components/Layout';
+import Home from './pages/Home';
+import Details from './pages/Details';
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-          {/* Homepage */}
-          <Route path="/" element={<Home />} />
-          {/* Dettaglio del paese */}
-          <Route path="/country/:name" element={<Details />} />
-        </Routes>
-    </Layout>
+    <Routes> 
+      <Route path="/" element={<Layout />}> 
+        <Route index element={<Home />} />
+        <Route path="country/:name" element={<Details />} />
+      </Route>
+    </Routes>
   );
 }
 

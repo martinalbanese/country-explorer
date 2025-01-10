@@ -18,15 +18,7 @@ export type CountryType = {
  * Definizione del tipo `CountryDetailsType` per un singolo paese.
  * Utilizzato per tipizzare i dati relativi ai dettagli dei paesi recuperati dall'API.
 */
-export type CountryDetailsType = {
-    name: {
-        common: string;
-    };
-    flags: {
-        svg: string;
-    };
-    region: string;
-    population: number;
+export type CountryDetailsType = CountryType & {
     capital: string[];
     languages: {
         [key: string]: string;

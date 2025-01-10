@@ -29,8 +29,19 @@ const CountryList = () => {
         )
     }
 
+    if (!countries) {
+        return (
+            <Box textAlign={"center"} color={"purple.500"}>
+                <Text>Paesi non disponibili</Text>
+            </Box>
+        )
+    }
+
     return (
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4, xl: 5 }} gap={6}>
+        <SimpleGrid 
+            columns={{ base: 1, sm: 2, md: 3, lg: 5, xl: 7 }} 
+            gap={6}
+            justifyItems={"center"}>
             {countries.map((country) => (
                 <CountryCard key={country.name.common} country={country} />
             ))}

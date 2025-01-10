@@ -1,6 +1,7 @@
 import { CountryType } from "@/types/types";
 import { Box, Image, VStack, Text, Heading } from "@chakra-ui/react";
 import { Link } from "react-router";
+import '../App.css'
 
 /**
 * Componente per visualizzare i dettagli di un paese.
@@ -14,26 +15,25 @@ type CountryCardProps = {
 }
 
 const CountryCard = ({ country }: CountryCardProps) => {
+    if (!country) {
+        <Box textAlign={"center"} color={"red.500"} p={5}>
+                <Text>Paese non trovato</Text>
+            </Box>
+    }
+
     return (
         <Link to={`/country/${country.name.common}`} style={{ textDecoration: 'none' }}>
             <Box
-                borderWidth={"1px"}
-                borderRadius={"lg"}
-                overflow={"hidden"}
-                boxShadow={"lg"}
-                maxW={"sm"}
-                bg={"white"}
-                display="flex"  // Usato per rendere il contenuto della card flessibile
-                flexDirection="column"  // Gli elementi saranno impilati verticalmente
-                height="100%">
+                className="card">
                 <Image
+                    className="card-img"
                     src={country.flags.svg}
                     alt={country.name.common}
                     maxH={96} />
-                <VStack align={"start"} p={4} color={"gray.700"}>
-                    <Heading size={"xl"}>{country.name.common}</Heading>
-                    <Text><strong>Region:</strong> {country.region}</Text>
-                    <Text><strong>Population:</strong> {country.population}</Text>
+                <VStack align={"start"} className="card-content">
+                    <Heading className="card-title">{country.name.common}</Heading>
+                    <Text className="card-text"><strong>Region:</strong> {country.region}</Text>
+                    <Text className="card-text"><strong>Population:</strong> {country.population}</Text>
                 </VStack>
             </Box>
         </Link>
