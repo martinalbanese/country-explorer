@@ -13,18 +13,27 @@ L'applicazione include una griglia di paesi e una pagina di dettagli per ciascun
 git clone https://github.com/martinalbanese/country-explorer.git
 ```
 
-2. **Installa le dipendenze**
+2. **Crea un file .env**
+Nella root del progetto, crea un file .env e aggiungi la seguente variabile d'ambiente:
+env
+Copia codice
+```
+VITE_BASE_URL=https://restcountries.com/v3.1
+```
+Nota: Assicurati che il valore di VITE_BASE_URL corrisponda all'endpoint che vuoi utilizzare per la fetch.
+
+3. **Installa le dipendenze**
 Assicurati di avere [Node.js](https://nodejs.org/en) installato. Poi esegui:
 ```bash
 npm install
 ```
 
-3. **Avvia l'applicazione**
+4. **Avvia l'applicazione**
 ```bash
 npm run dev
 ```
 
-4. **Accedi all'applicazione**
+5. **Accedi all'applicazione**
 L'applicazione sarà disponibile su: [http://localhost:5173](http://localhost:5173) (o un altro indirizzo mostrato nel terminale).
 
 ## Funzionalità implementate
