@@ -15,9 +15,7 @@ git clone https://github.com/martinalbanese/country-explorer.git
 
 2. **Crea un file .env**
 Nella root del progetto, crea un file .env e aggiungi la seguente variabile d'ambiente:
-env
-Copia codice
-```
+```env
 VITE_BASE_URL=https://restcountries.com/v3.1
 ```
 Nota: Assicurati che il valore di VITE_BASE_URL corrisponda all'endpoint che vuoi utilizzare per la fetch.
