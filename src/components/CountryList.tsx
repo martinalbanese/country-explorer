@@ -24,7 +24,7 @@ const CountryList = () => {
     if (error) {
         return (
             <Box textAlign={"center"} color={"red.500"}>
-                <Text>Si è verificato un errore durante il caricamento dei dati: {error}</Text>
+                <Text>Si è verificato un errore durante il caricamento dei dati in CountyList: {error}</Text>
             </Box>
         )
     }

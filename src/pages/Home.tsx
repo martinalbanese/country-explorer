@@ -11,7 +11,7 @@ import { Box, Heading } from "@chakra-ui/react";
 const Home = () => {
     return (
         <Box>
-            <Heading mb={5}>Elenco dei Paesi</Heading>
+            <Heading mb={5} size={"5xl"}>Elenco dei Paesi</Heading>
             <CountryList />
         </Box>
     );

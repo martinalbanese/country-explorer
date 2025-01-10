@@ -14,6 +14,10 @@ export type CountryType = {
     population: number;
 }
 
+/**
+ * Definizione del tipo `CountryDetailsType` per un singolo paese.
+ * Utilizzato per tipizzare i dati relativi ai dettagli dei paesi recuperati dall'API.
+*/
 export type CountryDetailsType = {
     name: {
         common: string;
@@ -28,7 +32,10 @@ export type CountryDetailsType = {
         [key: string]: string;
     };
     currencies: {
-        [key: string]: string;
+        [key: string]: {
+            name: string;
+            symbol: string;
+        };
     };
     borders: string[];
     timezones: string[];

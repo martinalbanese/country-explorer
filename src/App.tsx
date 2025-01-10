@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { Route, Routes } from "react-router";
+import Details from "./pages/Details";
 import Home from "./pages/Home";
 
 /**
@@ -16,7 +17,7 @@ function App() {
           {/* Homepage */}
           <Route path="/" element={<Home />} />
           {/* Dettaglio del paese */}
-          {/* <Route path="/country/:name" element={<Details />} /> */}
+          <Route path="/country/:name" element={<Details />} />
         </Routes>
     </Layout>
   );

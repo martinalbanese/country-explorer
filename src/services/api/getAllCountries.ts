@@ -13,9 +13,6 @@ export const getAllCountries = async (): Promise<CountryType[]> => {
     try {
         const response = await fetch(`${BASE_URL}/all`);
 
-        
-        console.log(response);
-
         if (!response.ok) {
             throw new Error('Errore nella fetch dei dati in getAllCountries');
         }
