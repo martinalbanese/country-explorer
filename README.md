@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Country Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Country Explorer è un'applicazione web sviluppata con React e Vite. 
+Consente di esplorare le informazioni sui paesi del mondo utilizzando dati, precisi e aggiornati, forniti dall'API Rest Countries, disponibile qui: [REST Countries API](https://restcountries.com/). 
 
-Currently, two official plugins are available:
+L'applicazione include una griglia di paesi e una pagina di dettagli per ciascun paese.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Istruzioni per l'installazione e l'esecuzione
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. **Clona il repository**
+```bash
+git clone https://github.com/martinalbanese/country-explorer.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. **Installa le dipendenze**
+Assicurati di avere [Node.js](https://nodejs.org/en) installato. Poi esegui:
+```bash
+npm install
 ```
+
+3. **Avvia l'applicazione**
+```bash
+npm run dev
+```
+
+4. **Accedi all'applicazione**
+L'applicazione sarà disponibile su: [http://localhost:5173](http://localhost:5173) (o un altro indirizzo mostrato nel terminale).
+
+## Funzionalità implementate
+1. **Homepage con Griglia di Paesi**
+    -  Mostra una griglia di card per ciascun paese.
+    - Le card includono la bandiera, il nome del paese, la regione e la popolazione.
+    - Supporta il layout responsive, adattandosi alle diverse dimensioni dello schermo.
+
+2. **Dettagli Paese**
+    - Cliccando su una carta, l'utente può accedere a una pagina di dettaglio per il paese selezionato.
+    - La pagina mostra informazioni come capitale, lingue, valute, confini e fuso orario.
+
+3. **Design Responsive**
+    - L'interfaccia si adatta perfettamente sia a schermi grandi che a dispositivi mobili.
+
+4. **Gestione dello Stato di Caricamento e degli Errori**
+    - Durante il recupero dei dati dall'API, un indicatore di caricamento informa l'utente.
+    - Eventuali errori vengono segnalati con messaggi chiari e leggibili.
+
+## Tecnologie Utilizzate
+- ***React***: Libreria principale per lo sviluppo dell'interfaccia.
+- ***Vite***: Tool di build veloce e leggero per lo sviluppo React.
+- ***Chakra UI***: Libreria di componenti per uno stile moderno e responsive.
+- ***React Router***: Per la gestione delle rotte e la navigazione tra le pagine.
+
